@@ -1,0 +1,14 @@
+%h2
+	Status Reports for
+	=@project.name
+-@reports.keys.sort.each do |date|
+	%div{id: "#{date.to_s(:db)}_day"}
+		%h3
+			Reports for
+			=date.to_s(:long)
+			-@reports[date].each do |report|
+				%div{id: "#{dom_id(report)}"}
+					Yesterday I: 
+					=report.yesterday
+					Today I will: 
+					=report.today

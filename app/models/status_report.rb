@@ -14,4 +14,6 @@ class StatusReport < ActiveRecord::Base
       errors[:base] << "Must have at least one status set"
     end
   end
+
+  scope :by_user_name, include: "user", order: "users.email ASC", conditions: "user_id IS NOT NULL"
 end

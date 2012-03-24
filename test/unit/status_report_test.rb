@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class StatusReportTest < ActiveSupport::TestCase
+  test "by user name should sort as expected" do
+    reports = StatusReport.by_user_name
+    expected = reports.map { |r| r.user.email }
+    assert_equal ["one@one.com", "one@one.com", "two@two.com", "two@two.com"], expected
+  end
   test "saving a staus report saves the status date" do
     actual = StatusReport.new(today: "t", yesterday: "y")
     actual.save

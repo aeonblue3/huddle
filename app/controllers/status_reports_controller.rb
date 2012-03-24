@@ -40,8 +40,9 @@ class StatusReportsController < ApplicationController
   # POST /status_reports
   # POST /status_reports.json
   def create
-    redirect_if_not_current_user(params[:status_report][:user_id]) and return
-    params[:status_report].merge!(user_id: current_user.id, project_id: current_project.id)
+    redirect_if_not_current_user(params[:status_report][:user_id]) and return 
+    params[:status_report].merge!(:user_id => current_user.id,
+        :project_id => current_project.id)
     @status_report = StatusReport.new(params[:status_report])
 
     respond_to do |format|
