@@ -23,8 +23,12 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'minitest'
-gem 'turn', group: :test
 
+group :test do
+  gem 'turn'
+  gem 'factory_girl_rails'
+  gem 'faker'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
