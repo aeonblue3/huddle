@@ -66,8 +66,11 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     mime-types (1.18)
     minitest (2.11.4)
+    mocha (0.10.5)
+      metaclass (~> 0.0.1)
     multi_json (1.1.0)
     orm_adapter (0.0.6)
     polyglot (0.3.3)
@@ -131,6 +134,7 @@ DEPENDENCIES
   haml
   jquery-rails
   minitest
+  mocha
   rails (= 3.2.2)
   sass-rails (~> 3.2.3)
   sqlite3

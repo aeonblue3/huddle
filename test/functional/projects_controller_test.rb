@@ -3,7 +3,7 @@ require 'test_helper'
 class ProjectsControllerTest < ActionController::TestCase
   setup :login_as_one
   setup do
-    @project = projects(:one)
+    @project = Factory.create(:project)
   end
 
   test "index should display project timeline" do
