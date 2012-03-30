@@ -3,6 +3,7 @@ require 'test_helper'
 class ProjectTest < ActiveSupport::TestCase
   setup do
     @project = Factory.create(:project)
+
   end
   
   test "should be able to retrieve projects based on day" do

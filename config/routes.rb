@@ -1,4 +1,6 @@
 Huddle::Application.routes.draw do
+  get "home/index"
+
   resources :status_reports
 
   resources :projects
@@ -54,7 +56,7 @@ Huddle::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'welcome#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
